@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
+const HOSTNAME = process.env.NODE_ENV === 'production' ?
+  `https://floating-beach-40262.herokuapp.com:${process.env.PORT}` :
+  'http://localhost:8080';
+
 ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
 
-fetch('http://localhost:8080/api/v1/messages')
+fetch(`${HOSTNAME}/api/v1/messages`)
   .then(res => res.json())
   .then(console.log)
   .catch(console.error);
