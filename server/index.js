@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../build')));
 }
 
-// Allow CORS on dev only
+// Allow CORS on dev only; we need CORS because client and server are on different ports
 if (process.env.NODE_ENV !== 'production') {
   app.use('/api/v1/*', allowCors);
 }
@@ -21,3 +21,4 @@ if (process.env.NODE_ENV !== 'production') {
 app.use('/api/v1/messages', messagesRouter);
 
 app.listen(PORT, () => console.log(`Server listening on ${PORT}...`));
+
