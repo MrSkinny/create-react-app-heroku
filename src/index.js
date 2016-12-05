@@ -4,7 +4,7 @@ import App from './App';
 import './index.css';
 
 const HOSTNAME = process.env.NODE_ENV === 'production' ?
-  `https://floating-beach-40262.herokuapp.com:${process.env.PORT}` :
+  '' :
   'http://localhost:8080';
 
 ReactDOM.render(
