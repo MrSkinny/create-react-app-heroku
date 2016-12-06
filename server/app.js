@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 const messagesRouter = require('./routers/messagesRouter');
 const allowCors = require('./middleware/allowCors');
