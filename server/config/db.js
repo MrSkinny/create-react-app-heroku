@@ -1,8 +1,6 @@
-// CONFIGURE BELOW THIS LINE
-const DB_NAME = 'howdy-world';
-// CONFIGURE ABOVE THIS LINE
-
 const mongoose = require('mongoose');
+const DB_NAME = process.env.DB_NAME || 'howdy-world';
+
 mongoose.Promise = global.Promise;
 
 const TEST_DB = process.env.NODE_ENV === 'test' ? `mongodb://localhost/${DB_NAME}-test` : null;

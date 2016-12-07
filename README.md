@@ -11,7 +11,7 @@ The purpose of this repo is to get up and running with `create-react-app` with s
 
 1. `npm install`
 2. Start your MongoDB database server
-3. Configure `DB_NAME` in `server/config/db.js` with the name of your database
+3. Add `DB_NAME=[your-name]` to `.env` file for your local dev/test database
 
 To run the development server, type: 
 
