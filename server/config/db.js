@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const DB_NAME = process.env.DB_NAME || 'howdy-world';
 
 mongoose.Promise = global.Promise;
